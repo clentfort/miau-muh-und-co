@@ -4,7 +4,7 @@ An offline-first Android and iOS app for playing short animal videos. Animal nam
 
 ## App development
 
-Requirements: Node.js 24 and an Android device or emulator. Local iOS development additionally requires Xcode 26.0.1 and an iOS Simulator.
+Requirements: Node.js 24 and an Android device or emulator. Local iOS development additionally requires Xcode 26.6 and an iOS Simulator.
 
 ```sh
 npm ci
