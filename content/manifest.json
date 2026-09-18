@@ -1,11 +1,183 @@
 {
   "schemaVersion": 1,
-  "version": "0f261612cafe893f",
-  "updatedAt": "2026-09-18T15:47:43.081096Z",
+  "version": "46c7724383a669f9",
+  "updatedAt": "2026-09-18T17:39:07.828774Z",
   "animals": [
+    {
+      "id": "monkey",
+      "name": "monkey",
+      "nameDe": "Affe",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/monkey.jpg",
+        "sha256": "1ff26a732f2bfa37224162377d53dc7427e0c2c0a325d0f3a9b922dc12038711",
+        "bytes": 57317
+      },
+      "clips": [
+        {
+          "id": "RU01wauDHfs",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/monkey-RU01wauDHfs.mp4",
+          "sha256": "559044301fa68a5e0537adb7d21bcef0cca9885ef61c65ff08f49fda20996aba",
+          "bytes": 782345,
+          "durationMs": 11781
+        }
+      ]
+    },
+    {
+      "id": "alpaca",
+      "name": "alpaca",
+      "nameDe": "Alpaka",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/alpaca.jpg",
+        "sha256": "8d1627cc7a684933a9acd90208ae766427118d5e9f528a5b97cf315f30d8c0ca",
+        "bytes": 36045
+      },
+      "clips": [
+        {
+          "id": "njr0pLNLbGY",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/alpaca-njr0pLNLbGY.mp4",
+          "sha256": "a307f2d8dfd38074335fe7ee830df46dba17d207a91185d6b0bd3a1171915510",
+          "bytes": 409952,
+          "durationMs": 4641
+        }
+      ]
+    },
+    {
+      "id": "bear",
+      "name": "bear",
+      "nameDe": "Bär",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/bear.jpg",
+        "sha256": "47041415c4b9c14d9a8bf2f134187e5821df623c10a720bcd87fc0d789ba0a64",
+        "bytes": 33856
+      },
+      "clips": [
+        {
+          "id": "KyfDeGvUqnA",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/bear-KyfDeGvUqnA.mp4",
+          "sha256": "6648664ac3d7a48c1c653cc299e7a46a42b7db7efeae1649e04c31a3ab04baf7",
+          "bytes": 782453,
+          "durationMs": 9841
+        }
+      ]
+    },
+    {
+      "id": "elephant",
+      "name": "elephant",
+      "nameDe": "Elefant",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/elephant.jpg",
+        "sha256": "e453152f4f578f2f45b0bf7373a0022c0c5129c24fa76fcac0df03b07fed673c",
+        "bytes": 45945
+      },
+      "clips": [
+        {
+          "id": "An44Lb1reJM",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/elephant-An44Lb1reJM.mp4",
+          "sha256": "44ae1e880f29228b6874951822219d47f68915e90d04ad2f84dc33c28917ed11",
+          "bytes": 674539,
+          "durationMs": 8301
+        }
+      ]
+    },
+    {
+      "id": "duck",
+      "name": "duck",
+      "nameDe": "Ente",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/duck.jpg",
+        "sha256": "be694713ef5728ec5e533f5f6c111829082be300442a2ca0d2d256071608cb5d",
+        "bytes": 70874
+      },
+      "clips": [
+        {
+          "id": "bNQKJhHkOh4",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/duck-bNQKJhHkOh4.mp4",
+          "sha256": "dc21c7414f6bf1486a20fb31dc9719a5e40e5dcac5374b496c5c283359bf7cdd",
+          "bytes": 3083385,
+          "durationMs": 9861
+        }
+      ]
+    },
+    {
+      "id": "meerkat",
+      "name": "meerkat",
+      "nameDe": "Erdmännchen",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/meerkat.jpg",
+        "sha256": "6a1cfe6069c840fa6515f1b1d41269eae007764a66224f60b7334b3d70287e4b",
+        "bytes": 39744
+      },
+      "clips": [
+        {
+          "id": "tRmrXb9m9CU",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/meerkat-tRmrXb9m9CU.mp4",
+          "sha256": "71ca2ab8a266ff6ccc3332e88c624cae4e63d95d624b9764916a7b1ad4c06cfa",
+          "bytes": 323146,
+          "durationMs": 4521
+        }
+      ]
+    },
+    {
+      "id": "donkey",
+      "name": "donkey",
+      "nameDe": "Esel",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/donkey.jpg",
+        "sha256": "2755a01251b713eae455aeeb7e4d67f2644a6ad6c4cc895597c33296d7156e0d",
+        "bytes": 82930
+      },
+      "clips": [
+        {
+          "id": "cJg2x2g0T9o",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/donkey-cJg2x2g0T9o.mp4",
+          "sha256": "3e7ec65771fae773fe392cd6957f8af8e05fbc9a0717e06747a28bb281736856",
+          "bytes": 1789939,
+          "durationMs": 11401
+        }
+      ]
+    },
+    {
+      "id": "owl",
+      "name": "owl",
+      "nameDe": "Eule",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/owl.jpg",
+        "sha256": "8480f5f2bf99963aaaa2f5484cb4c32678fa5083cc8fb3983dacd3c9eae079b6",
+        "bytes": 47445
+      },
+      "clips": [
+        {
+          "id": "Xe_PX1wBzUs",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/owl-Xe_PX1wBzUs.mp4",
+          "sha256": "35833a9c3423ffc3d4a1de51725523a96d77d97664b00cf91f02eeafd982d062",
+          "bytes": 1096367,
+          "durationMs": 10461
+        }
+      ]
+    },
+    {
+      "id": "goose",
+      "name": "goose",
+      "nameDe": "Gans",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/goose.jpg",
+        "sha256": "370b0f3001dd532d8767bc6c9a96e90ace1193920b72c0ea6f62eb6909c4dabd",
+        "bytes": 32054
+      },
+      "clips": [
+        {
+          "id": "ppMAUlpN03k",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/goose-ppMAUlpN03k.mp4",
+          "sha256": "eb8492713b3b1a395451cd599f6794c5e29e8f9631fcae1a5bbf8edf7f4cb377",
+          "bytes": 8592915,
+          "durationMs": 49941
+        }
+      ]
+    },
     {
       "id": "giraffe",
       "name": "giraffe",
+      "nameDe": "Giraffe",
       "cover": {
         "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/giraffe.jpg",
         "sha256": "4d798cfeb736248393a1ab43f0bcbc4a72950238531ed580a2d75f50d4c6460e",
@@ -24,6 +196,7 @@
     {
       "id": "gnu",
       "name": "gnu",
+      "nameDe": "Gnu",
       "cover": {
         "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/gnu.jpg",
         "sha256": "30e621770eb15b60ecc53e555426e7665befbde1bac1402b9bb60e8ef9f95045",
@@ -40,8 +213,199 @@
       ]
     },
     {
+      "id": "rooster",
+      "name": "rooster",
+      "nameDe": "Hahn",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/rooster.jpg",
+        "sha256": "2e6625f89ee47db11cd5f219a80cf05601f28fab9ead8c79533cc1a0f0e2a255",
+        "bytes": 55703
+      },
+      "clips": [
+        {
+          "id": "HcM4JZFHqcQ",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/rooster-HcM4JZFHqcQ.mp4",
+          "sha256": "edab691e3be8531128902c0f020c8288716132a31b10adfa8d807013fa0b4eda",
+          "bytes": 1215633,
+          "durationMs": 7301
+        }
+      ]
+    },
+    {
+      "id": "chicken",
+      "name": "chicken",
+      "nameDe": "Huhn",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/chicken.jpg",
+        "sha256": "323223fb9c5018cb827db0c35311242f7ba0727050d2e882a1513e190bf46d93",
+        "bytes": 50162
+      },
+      "clips": [
+        {
+          "id": "dFZa2KZ4fG4",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/chicken-dFZa2KZ4fG4.mp4",
+          "sha256": "619f6714e5eb84c7fd9fbe6ce017621c62e3d32cc8615cce59c66143b6da30fe",
+          "bytes": 1295276,
+          "durationMs": 10001
+        }
+      ]
+    },
+    {
+      "id": "dog",
+      "name": "dog",
+      "nameDe": "Hund",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/dog.jpg",
+        "sha256": "2000efbb6e69d053be035a88f60473ef18784a71ffc66f7a4d73812fae47ceb7",
+        "bytes": 24785
+      },
+      "clips": [
+        {
+          "id": "KXIdtD0yBwo",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/dog-KXIdtD0yBwo.mp4",
+          "sha256": "766bf51c81ecf91967a2f75d158ff7d89879805eb8bffc8bd151fa52d21fdcec",
+          "bytes": 373214,
+          "durationMs": 4761
+        }
+      ]
+    },
+    {
+      "id": "camel",
+      "name": "camel",
+      "nameDe": "Kamel",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/camel.jpg",
+        "sha256": "2d423d625161910b4644ca1e23d74cc2e65e1c64559262a0d8059bd985a002e8",
+        "bytes": 20621
+      },
+      "clips": [
+        {
+          "id": "fh41rEfVfDA",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/camel-fh41rEfVfDA.mp4",
+          "sha256": "0bd3854deecd73c0346f8c19d9d9c4b688fc1d9cc2966efbc712925d43b35dc6",
+          "bytes": 516163,
+          "durationMs": 5861
+        }
+      ]
+    },
+    {
+      "id": "canary",
+      "name": "canary",
+      "nameDe": "Kanarienvogel",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/canary.jpg",
+        "sha256": "7972d1a514784b491aadbb2a5fdce817c56e87e48b6664843dd40beb1a2d68ec",
+        "bytes": 25412
+      },
+      "clips": [
+        {
+          "id": "mWnEYjeCrY0",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/canary-mWnEYjeCrY0.mp4",
+          "sha256": "33a082b7270d107b50af8399f127907ac43e8f3c0d67be9ff162f496d971fd9e",
+          "bytes": 632786,
+          "durationMs": 7661
+        }
+      ]
+    },
+    {
+      "id": "rabbit",
+      "name": "rabbit",
+      "nameDe": "Kaninchen",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/rabbit.jpg",
+        "sha256": "d3a69e6da192f3d183414b66dfde96e07952f7e11927d3d3fdfd7e161f967422",
+        "bytes": 38669
+      },
+      "clips": [
+        {
+          "id": "amhd3juVObg",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/rabbit-amhd3juVObg.mp4",
+          "sha256": "4524ff93af329c119726d649e6b35da15034f8393dc89d64a4fb5467bf3e26b8",
+          "bytes": 242623,
+          "durationMs": 8341
+        }
+      ]
+    },
+    {
+      "id": "cat",
+      "name": "cat",
+      "nameDe": "Katze",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/cat.jpg",
+        "sha256": "9c51d836a6420b48d8691f2bca5728a23210aed6ce9df63bd8d943bff21928d1",
+        "bytes": 36158
+      },
+      "clips": [
+        {
+          "id": "3_irejNkT8Q",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/cat-3_irejNkT8Q.mp4",
+          "sha256": "8804e39a9bfb7f2a6d94294fb4c6b0f3cae566f1e01b6b4237629f19c9a1473a",
+          "bytes": 977793,
+          "durationMs": 12701
+        }
+      ]
+    },
+    {
+      "id": "crocodile",
+      "name": "crocodile",
+      "nameDe": "Krokodil",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/crocodile.jpg",
+        "sha256": "99d57365dbfbf5c55237fa6dac194e78ec9459c6090b778a0bbc0be9b294140d",
+        "bytes": 107550
+      },
+      "clips": [
+        {
+          "id": "XAqmOTzz4zw",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/crocodile-XAqmOTzz4zw.mp4",
+          "sha256": "658e47e9b5c340690209b91fe37a969261bc4719a76f7bc446bc86e5c812d16a",
+          "bytes": 2714421,
+          "durationMs": 12181
+        }
+      ]
+    },
+    {
+      "id": "cow",
+      "name": "cow",
+      "nameDe": "Kuh",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/cow.jpg",
+        "sha256": "ab4a4b90542460c3790ec2c7b62f3515f07edddd6d5ea26f33957349fbb49aeb",
+        "bytes": 26698
+      },
+      "clips": [
+        {
+          "id": "nwEKz6DN9jc",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/cow-nwEKz6DN9jc.mp4",
+          "sha256": "b579eab9cf715e13c170c28b92e8324e7921a3b0886eea239f443ffd485141f4",
+          "bytes": 278915,
+          "durationMs": 14101
+        }
+      ]
+    },
+    {
+      "id": "llama",
+      "name": "llama",
+      "nameDe": "Lama",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/llama.jpg",
+        "sha256": "6d4fb08391327114226c5130fb7047bab9a599b59d257db3ebd0dd863232ef5a",
+        "bytes": 22097
+      },
+      "clips": [
+        {
+          "id": "2eqfgHh3efs",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/llama-2eqfgHh3efs.mp4",
+          "sha256": "2553dcf1d49e81e1cf3aa72bf50afdb005b3ca187ca1ddc8e9431e6ae8f245bb",
+          "bytes": 1145008,
+          "durationMs": 22841
+        }
+      ]
+    },
+    {
       "id": "lion",
       "name": "lion",
+      "nameDe": "Löwe",
       "cover": {
         "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/lion.jpg",
         "sha256": "22941a953415b1c7af1825f7172b15586b91b227b581af4be77308f95c29ad91",
@@ -65,26 +429,187 @@
       ]
     },
     {
-      "id": "pinguin",
-      "name": "pinguin",
+      "id": "guinea-pig",
+      "name": "guinea pig",
+      "nameDe": "Meerschweinchen",
       "cover": {
-        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/pinguin.jpg",
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/guinea-pig.jpg",
+        "sha256": "72de85d57bb9b3c7466c167773212f43e4c5b93a711277824c98890ed4d8fda4",
+        "bytes": 19307
+      },
+      "clips": [
+        {
+          "id": "JoNTmi6sfro",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/guinea-pig-JoNTmi6sfro.mp4",
+          "sha256": "28dd1ee05c2b3b6c5a94180993d97e046456ec0300fc78c6d41c042cc6109030",
+          "bytes": 597499,
+          "durationMs": 4921
+        }
+      ]
+    },
+    {
+      "id": "hippopotamus",
+      "name": "hippopotamus",
+      "nameDe": "Nilpferd",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/hippopotamus.jpg",
+        "sha256": "2a43a2c9471b0f75f0f2dde69823dc383ee726930649ca3f6f22dfbf28a82517",
+        "bytes": 26658
+      },
+      "clips": [
+        {
+          "id": "UGSzILXN5ZY",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/hippopotamus-UGSzILXN5ZY.mp4",
+          "sha256": "b8a3f6560b6ac20a69734a31905ed2136e4fd503d9c385878756fbd6a184661f",
+          "bytes": 2649335,
+          "durationMs": 12681
+        }
+      ]
+    },
+    {
+      "id": "parrot",
+      "name": "parrot",
+      "nameDe": "Papagei",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/parrot.jpg",
+        "sha256": "56b5058e2d947b7a3506e49a0b6829431f1f78efaff78ed475deee407b47793f",
+        "bytes": 15732
+      },
+      "clips": [
+        {
+          "id": "2aX20VxiqGo",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/parrot-2aX20VxiqGo.mp4",
+          "sha256": "30adab8796a2ea73cc644efe53f9a201aca92a1f8e3afeec89e534e4d1db03ac",
+          "bytes": 254503,
+          "durationMs": 5201
+        }
+      ]
+    },
+    {
+      "id": "peacock",
+      "name": "peacock",
+      "nameDe": "Pfau",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/peacock.jpg",
+        "sha256": "d209abe415027e55ab432f1c457f3f60105d268aa1a4817b836e2b5ed254e308",
+        "bytes": 21838
+      },
+      "clips": [
+        {
+          "id": "afAe3IucE30",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/peacock-afAe3IucE30.mp4",
+          "sha256": "15d3f9bf4e5b793a16052aea7b679011bc8dc8775d626f6473110ecf343f1d12",
+          "bytes": 203678,
+          "durationMs": 4241
+        }
+      ]
+    },
+    {
+      "id": "horse",
+      "name": "horse",
+      "nameDe": "Pferd",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/horse.jpg",
+        "sha256": "7e5a6d0b92c39a4e1f9b57dcece9b2e9b45995d18dc27c7be646b155c024af7d",
+        "bytes": 31992
+      },
+      "clips": [
+        {
+          "id": "7m21ZBUnLFw",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/horse-7m21ZBUnLFw.mp4",
+          "sha256": "811344c7552ffa971c8122934379f464f8005d99e5a95a33314d04e223727f50",
+          "bytes": 485626,
+          "durationMs": 6181
+        }
+      ]
+    },
+    {
+      "id": "penguin",
+      "name": "penguin",
+      "nameDe": "Pinguin",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/penguin.jpg",
         "sha256": "c92af70172c6c582e7a431812b2202a2831b7c4649d794ce71401d4f65ece35b",
         "bytes": 12260
       },
       "clips": [
         {
           "id": "MVgwKQjHhxQ",
-          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/pinguin-MVgwKQjHhxQ.mp4",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/penguin-MVgwKQjHhxQ.mp4",
           "sha256": "7cbf23df37597b51ca5ec76e8a81b0da20964c1ae1ababcc9b9ec020444990b3",
           "bytes": 195001,
           "durationMs": 4201
+        },
+        {
+          "id": "ly9p2kC05uM",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/penguin-ly9p2kC05uM.mp4",
+          "sha256": "45ef523af70eac42602c059e56d8e61290bdf861cb16610ce0dd6f5c896bc26e",
+          "bytes": 557822,
+          "durationMs": 8761
+        }
+      ]
+    },
+    {
+      "id": "pony",
+      "name": "pony",
+      "nameDe": "Pony",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/pony.jpg",
+        "sha256": "32bf5988184da6b8dfd4cfe5e8a2866174a60f8f82439933268f63f56125edfe",
+        "bytes": 28768
+      },
+      "clips": [
+        {
+          "id": "Li0xIeD3M-c",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/pony-Li0xIeD3M-c.mp4",
+          "sha256": "bcb8943409f043538524a004acfd27fc9744aa26e329d68623753ad7ea69cb3f",
+          "bytes": 1111914,
+          "durationMs": 8382
+        }
+      ]
+    },
+    {
+      "id": "sheep",
+      "name": "sheep",
+      "nameDe": "Schaf",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/sheep.jpg",
+        "sha256": "959e1fb4aaf58fc37e9ca11c05a1352f645876886e24cc8da067d0e0baf7deb8",
+        "bytes": 41498
+      },
+      "clips": [
+        {
+          "id": "EbXD1z5EsXg",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/sheep-EbXD1z5EsXg.mp4",
+          "sha256": "ad2992fa5c79f816eb142369c019909ba4ec48f9a0b7467671980b88144902a5",
+          "bytes": 625886,
+          "durationMs": 4061
+        }
+      ]
+    },
+    {
+      "id": "pig",
+      "name": "pig",
+      "nameDe": "Schwein",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/pig.jpg",
+        "sha256": "ab1861026ba8f46460677e6a0b9de59a73734d538e95e4a4dc5a1619d919cf97",
+        "bytes": 37874
+      },
+      "clips": [
+        {
+          "id": "icZNZtq2Mns",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/pig-icZNZtq2Mns.mp4",
+          "sha256": "6ee2d337782491c3e17a038315864981dcf09ea398a6aac9f9fe5b6649bb38b9",
+          "bytes": 1500033,
+          "durationMs": 9961
         }
       ]
     },
     {
       "id": "seal",
       "name": "seal",
+      "nameDe": "Seehund",
       "cover": {
         "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/seal.jpg",
         "sha256": "064db524bdcf1bac1e24c09376e697daa585a80a702eda7faf43609576b4fcf9",
@@ -97,6 +622,120 @@
           "sha256": "641c755985abd75659a75e05ae43fa920590eb78fe1ccce67b20959e5168d412",
           "bytes": 788274,
           "durationMs": 5281
+        }
+      ]
+    },
+    {
+      "id": "tiger",
+      "name": "tiger",
+      "nameDe": "Tiger",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/tiger.jpg",
+        "sha256": "4184d985161b5fde92268b44607c3428400cdbe34f13a4ce1da62e2bcb0b7ce8",
+        "bytes": 44545
+      },
+      "clips": [
+        {
+          "id": "cf5TUZrb-_g",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/tiger-cf5TUZrb-_g.mp4",
+          "sha256": "48e81854172868321f5ebe50205583d9a67b19bf9244a54d1ea5072008d3e1af",
+          "bytes": 323826,
+          "durationMs": 5041
+        }
+      ]
+    },
+    {
+      "id": "turkey",
+      "name": "turkey",
+      "nameDe": "Truthahn",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/turkey.jpg",
+        "sha256": "27b5e44f5bf7c110d46caefe1c0bc56bdbe777ebaf2bcfb696800810b1c5c680",
+        "bytes": 7002
+      },
+      "clips": [
+        {
+          "id": "tkxmqKXYwd4",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/turkey-tkxmqKXYwd4.mp4",
+          "sha256": "29f30d7a28c13acd552eb7e980f26dbed7a1fbb5ae927563dd66c7e88ae1dc77",
+          "bytes": 98296,
+          "durationMs": 7121
+        }
+      ]
+    },
+    {
+      "id": "budgerigar",
+      "name": "budgerigar",
+      "nameDe": "Wellensittich",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/budgerigar.jpg",
+        "sha256": "1d54976f30019ac3ff7ecd1e76c4af8931d4e1b70c42726ee3b2d1f4044e746f",
+        "bytes": 25171
+      },
+      "clips": [
+        {
+          "id": "4mv_YtSeIxQ",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/budgerigar-4mv_YtSeIxQ.mp4",
+          "sha256": "0e726298f5e39b21b69cc7999191b9886f58d3cc213108c0435103cf361e9458",
+          "bytes": 868497,
+          "durationMs": 17741
+        }
+      ]
+    },
+    {
+      "id": "wolf",
+      "name": "wolf",
+      "nameDe": "Wolf",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/wolf.jpg",
+        "sha256": "dc4cf2f881f8108ab337a87ed8ce72c69854c64f25a6408de4a266898703f9f4",
+        "bytes": 19160
+      },
+      "clips": [
+        {
+          "id": "EE8LUWmi9E4",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/wolf-EE8LUWmi9E4.mp4",
+          "sha256": "49b9255dc1ac43c2e81c9f2554a3290ffc9c50e0dd26b24a208216eb44ac5112",
+          "bytes": 178900,
+          "durationMs": 8481
+        }
+      ]
+    },
+    {
+      "id": "zebra",
+      "name": "zebra",
+      "nameDe": "Zebra",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/zebra.jpg",
+        "sha256": "6413dd8415fd8846ba216090c168cf7b59d327933b5340fffc52dc207525e024",
+        "bytes": 44127
+      },
+      "clips": [
+        {
+          "id": "p8X71SxM7Is",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/zebra-p8X71SxM7Is.mp4",
+          "sha256": "9019be6d20e9b5b6e6e7abd2b09d0320cd2d0fdbd628976c37a6e3892e448b54",
+          "bytes": 1516024,
+          "durationMs": 7941
+        }
+      ]
+    },
+    {
+      "id": "goat",
+      "name": "goat",
+      "nameDe": "Ziege",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/goat.jpg",
+        "sha256": "d8484d37bbf94a22883b3b772e96bff2a91eaf3c13ba4df1c322d18948cffb50",
+        "bytes": 76137
+      },
+      "clips": [
+        {
+          "id": "i4dKc9QsPEw",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/goat-i4dKc9QsPEw.mp4",
+          "sha256": "e8a12ed1c8907d3e68b1a30b0bf14476bba8fd32914164cf23febc77dc614045",
+          "bytes": 2292061,
+          "durationMs": 14941
         }
       ]
     }
