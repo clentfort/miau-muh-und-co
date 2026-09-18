@@ -116,7 +116,7 @@ async function verifyFile(file: File, asset: RemoteAsset): Promise<boolean> {
     return false;
   }
 
-  const digest = await Crypto.digest(Crypto.CryptoDigestAlgorithm.SHA256, await file.arrayBuffer());
+  const digest = await Crypto.digest(Crypto.CryptoDigestAlgorithm.SHA256, await file.bytes());
   return bytesToHex(digest) === asset.sha256;
 }
 
@@ -254,6 +254,7 @@ export async function syncLibrary(
     return library;
   } catch (error) {
     const message = error instanceof Error ? error.message : 'The content update failed.';
+    console.error('Content sync failed:', error);
     onStatus({ kind: 'error', message });
     return loadInstalledLibrary();
   }

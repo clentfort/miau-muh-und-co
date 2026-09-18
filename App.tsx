@@ -393,7 +393,9 @@ function HomeScreen() {
         <Text style={styles.emptyText}>
           {needsWifi
             ? 'Verbinde dich mit einem WLAN, um die Tierstimmen herunterzuladen.'
-            : 'Die Tierstimmen werden vorbereitet.'}
+            : status.kind === 'error'
+              ? `Download fehlgeschlagen: ${status.message}`
+              : 'Die Tierstimmen werden vorbereitet.'}
         </Text>
         {status.kind !== 'wifi-required' && status.kind !== 'error' ? (
           <ActivityIndicator color={COLORS.accent} size="large" />
