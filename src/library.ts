@@ -164,6 +164,7 @@ function toLocalLibrary(manifest: ContentManifest): LocalLibrary | null {
     animals.push({
       id: animal.id,
       name: animal.name,
+      nameDe: animal.nameDe,
       coverUri: cover.uri,
       clips,
     });
