@@ -1,7 +1,7 @@
 # Miau, Muh und Mehr
 
-Offline-first Android app (Expo / React Native) that plays short animal videos.
-The UI is German and the audience is small children. Clips come from YouTube
+Offline-first Android and iOS app (Expo / React Native) that plays short animal
+videos. The UI is German and the audience is small children. Clips come from YouTube
 Shorts that CI downloads, normalizes, and publishes as GitHub Release assets.
 
 ## Definition of done
@@ -26,8 +26,8 @@ Node 24 through nvm and runs `npm ci`; the Python suites need no dependencies
 beyond the standard library.
 
 The app itself cannot be launched in a headless VM — it needs an Android device
-or emulator (`npm run android`). Verify changes with the checks above, not by
-running the app.
+or emulator (`npm run android`) or Xcode with an iOS Simulator (`npm run ios`).
+Verify changes with the checks above when no suitable device is available.
 
 ## Layout
 
@@ -43,7 +43,7 @@ running the app.
 - `scripts/content/build_content.py` — yt-dlp and FFmpeg pipeline.
 - `scripts/android/configure_signing.py` — release signing for the APK build.
 - `.github/workflows/` — `ci.yml` (checks), `content.yml` (publish clips),
-  `android.yml` (APK build).
+  `android.yml` (APK build), `ios.yml` (unsigned iOS Simulator build).
 
 ## Conventions
 

@@ -1,14 +1,15 @@
 # Miau, Muh und Mehr
 
-An offline-first Android app for playing short animal videos. Animal names are shown in German. Animals can be shown as large tiles, a carousel, or a list. Selecting one plays up to three shuffled clips and then returns home.
+An offline-first Android and iOS app for playing short animal videos. Animal names are shown in German. Animals can be shown as large tiles, a carousel, or a list. Selecting one plays up to three shuffled clips and then returns home.
 
 ## App development
 
-Requirements: Node.js 24 and an Android device or emulator.
+Requirements: Node.js 24 and an Android device or emulator. Local iOS development additionally requires Xcode and an iOS Simulator.
 
 ```sh
 npm ci
 npm run android
+npm run ios
 ```
 
 The first launch downloads the current content release over Wi-Fi. Later launches use the local copy and update it atomically when a new manifest is available.
@@ -22,11 +23,38 @@ python3 -m unittest discover -s scripts/content -p 'test_*.py'
 python3 -m unittest discover -s scripts/android -p 'test_*.py'
 ```
 
-To create an installable APK without local Android tooling, run **Build Android APK** from GitHub Actions and download the `miau-muh-und-mehr` artifact. The release-signing keystore and credentials are backed up in the private 1Password vault and supplied to Actions through repository secrets. An EAS build is also configured:
+## Android builds
+
+To create an installable APK without local Android tooling, run **Build Android APK** from GitHub Actions and download the `miau-muh-und-mehr` artifact. The release-signing keystore and credentials are backed up in the private 1Password vault and supplied to Actions through repository secrets.
+
+## iOS builds
+
+The iOS bundle identifier is `com.lentfort.miaumuhundmehr`.
+
+Run **Build iOS Simulator App** in GitHub Actions to produce a zipped `.app` that can be installed in an iOS Simulator. This build is unsigned and cannot be installed on a physical device.
+
+Signed device and App Store builds use EAS. The one-time setup links the repository to an Expo project:
 
 ```sh
-npx eas-cli build --platform android --profile preview
+npx --yes eas-cli@24.6.0 login
+npx --yes eas-cli@24.6.0 init
 ```
+
+Then create the desired build:
+
+```sh
+# Simulator, no Apple signing required
+npx --yes eas-cli@24.6.0 build --platform ios --profile simulator
+
+# Registered iPhones, Apple Developer membership required
+npx --yes eas-cli@24.6.0 device:create
+npx --yes eas-cli@24.6.0 build --platform ios --profile preview
+
+# App Store / TestFlight
+npx --yes eas-cli@24.6.0 build --platform ios --profile production
+```
+
+EAS guides the first signed build through creating or selecting the Apple distribution certificate and provisioning profile.
 
 ## Adding an animal clip
 

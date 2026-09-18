@@ -15,6 +15,11 @@
       },
       "softwareKeyboardLayoutMode": "resize"
     },
+    "ios": {
+      "bundleIdentifier": "com.lentfort.miaumuhundmehr",
+      "buildNumber": "1",
+      "supportsTablet": false
+    },
     "plugins": [
       "expo-video",
       [

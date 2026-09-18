@@ -1,0 +1,50 @@
+name: Build iOS Simulator App
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - name: Generate iOS project
+        run: npx expo prebuild --platform ios --no-install
+      - name: Install CocoaPods dependencies
+        working-directory: ios
+        run: pod install
+      - name: Build simulator app
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -workspace ios/MiauMuhundMehr.xcworkspace \
+            -scheme MiauMuhundMehr \
+            -configuration Release \
+            -sdk iphonesimulator \
+            -destination "generic/platform=iOS Simulator" \
+            -derivedDataPath "$RUNNER_TEMP/ios-build" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            build
+      - name: Package simulator app
+        run: |
+          APP="$RUNNER_TEMP/ios-build/Build/Products/Release-iphonesimulator/MiauMuhundMehr.app"
+          test -d "$APP"
+          ditto -c -k --sequesterRsrc --keepParent \
+            "$APP" \
+            "$RUNNER_TEMP/miau-muh-und-mehr-ios-simulator.zip"
+      - name: Upload simulator app
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: miau-muh-und-mehr-ios-simulator
+          path: ${{ runner.temp }}/miau-muh-und-mehr-ios-simulator.zip
+          if-no-files-found: error
+          retention-days: 30
