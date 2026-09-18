@@ -46,3 +46,7 @@ __pycache__/
 # generated native folders
 /ios
 /android
+
+# agent skills (a global ignore excludes .claude/)
+!.claude/
+!.claude/skills/**
