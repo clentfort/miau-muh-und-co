@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "android": {
-      "package": "com.lentfort.miaumuhundmehr",
+      "package": "com.lentfort.miaumuhundco",
       "versionCode": 3,
       "adaptiveIcon": {
         "backgroundColor": "#fff7df",
