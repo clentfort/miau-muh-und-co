@@ -374,15 +374,9 @@ function HomeScreen() {
     });
   }, []);
 
-  if (playback) {
-    return (
-      <PlaybackScreen
-        onAdvance={advancePlayback}
-        onClose={() => setPlayback(null)}
-        playback={playback}
-      />
-    );
-  }
+  const closePlayback = useCallback(() => {
+    setPlayback(null);
+  }, []);
 
   if (!ready || !library) {
     const needsWifi = ready && status.kind === 'wifi-required';
@@ -468,6 +462,21 @@ function HomeScreen() {
         onClose={() => setSettingsVisible(false)}
         visible={settingsVisible}
       />
+
+      <Modal
+        animationType="fade"
+        onRequestClose={closePlayback}
+        statusBarTranslucent
+        visible={playback !== null}
+      >
+        {playback ? (
+          <PlaybackScreen
+            onAdvance={advancePlayback}
+            onClose={closePlayback}
+            playback={playback}
+          />
+        ) : null}
+      </Modal>
     </SafeAreaView>
   );
 }
