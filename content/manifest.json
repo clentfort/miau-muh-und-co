@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "version": "443a54fb0dab98b6",
+  "updatedAt": "2026-09-18T14:06:31.488251Z",
+  "animals": [
+    {
+      "id": "giraffe",
+      "name": "giraffe",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-co/releases/download/content/giraffe.jpg",
+        "sha256": "4d798cfeb736248393a1ab43f0bcbc4a72950238531ed580a2d75f50d4c6460e",
+        "bytes": 40769
+      },
+      "clips": [
+        {
+          "id": "xLWXtgp1D1A",
+          "url": "https://github.com/clentfort/miau-muh-und-co/releases/download/content/giraffe-xLWXtgp1D1A.mp4",
+          "sha256": "8c6b7e3094171bc137633199a9965e23d7262c6dad5c855503c67039d62b7524",
+          "bytes": 1006973,
+          "durationMs": 7901
+        }
+      ]
+    },
+    {
+      "id": "gnu",
+      "name": "gnu",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-co/releases/download/content/gnu.jpg",
+        "sha256": "30e621770eb15b60ecc53e555426e7665befbde1bac1402b9bb60e8ef9f95045",
+        "bytes": 16640
+      },
+      "clips": [
+        {
+          "id": "siJ0aW2lRx8",
+          "url": "https://github.com/clentfort/miau-muh-und-co/releases/download/content/gnu-siJ0aW2lRx8.mp4",
+          "sha256": "8caafa7cf6d21ffcb17b6bd6d46ffe9dc18dccd2a932af365e4e902ca7a9384e",
+          "bytes": 512923,
+          "durationMs": 14401
+        }
+      ]
+    },
+    {
+      "id": "lion",
+      "name": "lion",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-co/releases/download/content/lion.jpg",
+        "sha256": "22941a953415b1c7af1825f7172b15586b91b227b581af4be77308f95c29ad91",
+        "bytes": 42758
+      },
+      "clips": [
+        {
+          "id": "0dbu5Q3l-yM",
+          "url": "https://github.com/clentfort/miau-muh-und-co/releases/download/content/lion-0dbu5Q3l-yM.mp4",
+          "sha256": "0c452ecb1f707b96373f73216332865f68a0c12f14e4d84e3c0990f9831126c6",
+          "bytes": 1026250,
+          "durationMs": 8021
+        },
+        {
+          "id": "oN7axlCqiG4",
+          "url": "https://github.com/clentfort/miau-muh-und-co/releases/download/content/lion-oN7axlCqiG4.mp4",
+          "sha256": "ab1efc2821ddebee1efc62a122704adcc992e2ae8d7fbf73662ec8119ebcd5b2",
+          "bytes": 790875,
+          "durationMs": 8021
+        }
+      ]
+    },
+    {
+      "id": "seal",
+      "name": "seal",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-co/releases/download/content/seal.jpg",
+        "sha256": "064db524bdcf1bac1e24c09376e697daa585a80a702eda7faf43609576b4fcf9",
+        "bytes": 43250
+      },
+      "clips": [
+        {
+          "id": "jFLbcO88vWc",
+          "url": "https://github.com/clentfort/miau-muh-und-co/releases/download/content/seal-jFLbcO88vWc.mp4",
+          "sha256": "641c755985abd75659a75e05ae43fa920590eb78fe1ccce67b20959e5168d412",
+          "bytes": 788274,
+          "durationMs": 5281
+        }
+      ]
+    }
+  ]
+}
