@@ -42,10 +42,25 @@ def youtube_id(url: str) -> str:
     return video_id
 
 
-def add_clip(catalog: dict, animal_name: str, short_url: str) -> dict:
+GERMAN_FOLDING = str.maketrans({"ä": "a", "ö": "o", "ü": "u", "ß": "ss"})
+
+
+def german_sort_key(animal: dict) -> str:
+    return animal["nameDe"].lower().translate(GERMAN_FOLDING)
+
+
+def normalize_german_name(value: str) -> str:
+    return " ".join(value.strip().split())
+
+
+def add_clip(
+    catalog: dict, animal_name: str, short_url: str, german_name: str = ""
+) -> dict:
     name = normalize_name(animal_name)
     if not name:
         raise ValueError("The animal name must not be empty.")
+
+    name_de = normalize_german_name(german_name)
 
     source_id = youtube_id(short_url)
     animals = catalog.setdefault("animals", [])
@@ -57,10 +72,14 @@ def add_clip(catalog: dict, animal_name: str, short_url: str) -> dict:
 
     animal = next((item for item in animals if item.get("name") == name), None)
     if animal is None:
-        animal = {"id": slugify(name), "name": name, "sources": []}
+        if not name_de:
+            raise ValueError(f"The new animal {name!r} needs a German name.")
+        animal = {"id": slugify(name), "name": name, "nameDe": name_de, "sources": []}
         if any(item.get("id") == animal["id"] for item in animals):
             raise ValueError(f"The generated animal id {animal['id']!r} already exists.")
         animals.append(animal)
+    elif name_de:
+        animal["nameDe"] = name_de
 
     animal.setdefault("sources", []).append(
         {
@@ -68,7 +87,7 @@ def add_clip(catalog: dict, animal_name: str, short_url: str) -> dict:
             "url": f"https://www.youtube.com/shorts/{source_id}",
         }
     )
-    animals.sort(key=lambda item: item["name"])
+    animals.sort(key=german_sort_key)
     return catalog
 
 
@@ -77,10 +96,11 @@ def main() -> None:
     parser.add_argument("--catalog", type=Path, required=True)
     parser.add_argument("--animal", required=True)
     parser.add_argument("--url", required=True)
+    parser.add_argument("--name-de", default="")
     args = parser.parse_args()
 
     catalog = json.loads(args.catalog.read_text())
-    updated = add_clip(catalog, args.animal, args.url)
+    updated = add_clip(catalog, args.animal, args.url, args.name_de)
     args.catalog.write_text(json.dumps(updated, indent=2, ensure_ascii=False) + "\n")
 
 

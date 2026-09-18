@@ -113,7 +113,7 @@ function PlaybackScreen({
       />
       <View pointerEvents="box-none" style={styles.playerOverlay}>
         <View style={styles.playerLabel}>
-          <Text style={styles.playerAnimal}>{displayName(playback.animal.name)}</Text>
+          <Text style={styles.playerAnimal}>{displayName(playback.animal)}</Text>
           <Text style={styles.playerCount}>
             {playback.index + 1} / {playback.clips.length}
           </Text>
@@ -147,14 +147,14 @@ function GridView({ animals, onSelect }: AnimalViewProps) {
       numColumns={2}
       renderItem={({ item }) => (
         <Pressable
-          accessibilityLabel={`${displayName(item.name)} abspielen`}
+          accessibilityLabel={`${displayName(item)} abspielen`}
           accessibilityRole="button"
           onPress={() => onSelect(item)}
           style={({ pressed }) => [styles.gridCard, pressed && styles.cardPressed]}
         >
           <AnimalImage animal={item} style={styles.gridImage} />
           <View style={styles.imageShade} />
-          <Text style={styles.gridName}>{displayName(item.name)}</Text>
+          <Text style={styles.gridName}>{displayName(item)}</Text>
         </Pressable>
       )}
       showsVerticalScrollIndicator={false}
@@ -171,13 +171,13 @@ function ListView({ animals, onSelect }: AnimalViewProps) {
       keyboardShouldPersistTaps="handled"
       renderItem={({ item }) => (
         <Pressable
-          accessibilityLabel={`${displayName(item.name)} abspielen`}
+          accessibilityLabel={`${displayName(item)} abspielen`}
           accessibilityRole="button"
           onPress={() => onSelect(item)}
           style={({ pressed }) => [styles.listCard, pressed && styles.cardPressed]}
         >
           <AnimalImage animal={item} style={styles.listImage} />
-          <Text style={styles.listName}>{displayName(item.name)}</Text>
+          <Text style={styles.listName}>{displayName(item)}</Text>
           <View style={styles.playCircle}>
             <Text style={styles.playIcon}>▶</Text>
           </View>
@@ -202,7 +202,7 @@ function CarouselView({ animals, onSelect }: AnimalViewProps) {
       keyboardShouldPersistTaps="handled"
       renderItem={({ item }) => (
         <Pressable
-          accessibilityLabel={`${displayName(item.name)} abspielen`}
+          accessibilityLabel={`${displayName(item)} abspielen`}
           accessibilityRole="button"
           onPress={() => onSelect(item)}
           style={({ pressed }) => [
@@ -214,7 +214,7 @@ function CarouselView({ animals, onSelect }: AnimalViewProps) {
           <AnimalImage animal={item} style={styles.carouselImage} />
           <View style={styles.carouselShade} />
           <View style={styles.carouselLabel}>
-            <Text style={styles.carouselName}>{displayName(item.name)}</Text>
+            <Text style={styles.carouselName}>{displayName(item)}</Text>
             <Text style={styles.carouselHint}>Antippen zum Abspielen</Text>
           </View>
         </Pressable>
@@ -345,7 +345,7 @@ function HomeScreen() {
   }, [refresh]);
 
   const animals = useMemo(
-    () => library?.animals.filter((animal) => matchesSearch(animal.name, query)) ?? [],
+    () => library?.animals.filter((animal) => matchesSearch(animal, query)) ?? [],
     [library, query],
   );
 
@@ -449,7 +449,7 @@ function HomeScreen() {
         <ScrollView contentContainerStyle={styles.noResults} keyboardShouldPersistTaps="handled">
           <Text style={styles.noResultsIcon}>?</Text>
           <Text style={styles.noResultsTitle}>Kein Tier gefunden</Text>
-          <Text style={styles.noResultsText}>Versuche einen anderen englischen Tiernamen.</Text>
+          <Text style={styles.noResultsText}>Versuche einen anderen Tiernamen.</Text>
         </ScrollView>
       ) : layout === 'grid' ? (
         <GridView animals={animals} onSelect={selectAnimal} />

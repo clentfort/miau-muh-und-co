@@ -64,6 +64,8 @@ function isAnimal(value: unknown): value is ManifestAnimal {
     typeof value.name === 'string' &&
     value.name.length > 0 &&
     value.name === value.name.toLocaleLowerCase('en') &&
+    (value.nameDe === undefined ||
+      (typeof value.nameDe === 'string' && value.nameDe.length > 0)) &&
     isAsset(value.cover) &&
     Array.isArray(value.clips) &&
     value.clips.length > 0 &&

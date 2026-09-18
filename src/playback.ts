@@ -1,4 +1,4 @@
-import type { LocalClip } from './types';
+import type { LocalClip, ManifestAnimal } from './types';
 
 export const MAX_CLIPS_PER_PLAYBACK = 3;
 
@@ -33,10 +33,21 @@ export function normalizeSearch(value: string): string {
     .toLocaleLowerCase('en');
 }
 
-export function matchesSearch(name: string, query: string): boolean {
-  return normalizeSearch(name).includes(normalizeSearch(query));
+type NamedAnimal = Pick<ManifestAnimal, 'name' | 'nameDe'>;
+
+/** German name of the animal, falling back to the capitalized English name. */
+export function displayName(animal: NamedAnimal): string {
+  return (
+    animal.nameDe ??
+    animal.name.replace(/(^|[\s-])\p{L}/gu, (letter) => letter.toLocaleUpperCase('de'))
+  );
 }
 
-export function displayName(name: string): string {
-  return name.replace(/(^|[\s-])\p{L}/gu, (letter) => letter.toLocaleUpperCase('en'));
+/** Matches the German and the English name so both spellings find the animal. */
+export function matchesSearch(animal: NamedAnimal, query: string): boolean {
+  const term = normalizeSearch(query);
+  return (
+    normalizeSearch(displayName(animal)).includes(term) ||
+    normalizeSearch(animal.name).includes(term)
+  );
 }
