@@ -47,14 +47,9 @@ https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/manifes
 
 The repository and release assets must be publicly readable by the app.
 
-## Initial catalog
+## Catalog
 
-The initial source catalog contains:
-
-- giraffe
-- gnu
-- lion (two clips)
-- seal
+The catalog covers common zoo, farm, petting zoo, and household animals — 38 in total, from Affe to Ziege, with two clips for Löwe.
 
 Pushing the repository to `main` runs the content workflow and creates the first release automatically.
 
