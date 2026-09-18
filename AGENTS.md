@@ -26,8 +26,8 @@ Node 24 through nvm and runs `npm ci`; the Python suites need no dependencies
 beyond the standard library.
 
 The app itself cannot be launched in a headless VM — it needs an Android device
-or emulator (`npm run android`) or Xcode with an iOS Simulator (`npm run ios`).
-Verify changes with the checks above when no suitable device is available.
+or emulator (`npm run android`) or Xcode 26+ with an iOS Simulator
+(`npm run ios`). Verify changes with the checks above when no suitable device is available.
 
 ## Layout
 
