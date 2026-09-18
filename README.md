@@ -21,7 +21,7 @@ npm test
 python3 -m unittest discover -s scripts/content -p 'test_*.py'
 ```
 
-To create an installable Android APK with EAS:
+To create an installable APK without local Android tooling, run **Build Android APK** from GitHub Actions and download the `miau-muh-und-co` artifact. An EAS build is also configured:
 
 ```sh
 npx eas-cli build --platform android --profile preview

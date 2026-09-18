@@ -32,17 +32,17 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7.0.0
         with:
           python-version: "3.13"
 
       - name: Restore processed media cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6.1.0
         with:
           path: .content-cache
           key: content-v1-${{ github.run_id }}
@@ -64,7 +64,7 @@ jobs:
             --sysctl net.ipv6.conf.all.disable_ipv6=0 \
             --sysctl net.ipv4.conf.all.src_valid_mark=1 \
             caomingjun/warp@sha256:d50d29d859bd437420bf63256f803e9fac28657c346b6f5ba50e21ffeb93dff2
-          for attempt in {1..20}; do
+          for _ in {1..20}; do
             if curl --fail --silent --show-error --max-time 10 \
               --proxy socks5h://127.0.0.1:1080 \
               https://www.cloudflare.com/cdn-cgi/trace | grep --quiet 'warp=on'; then
