@@ -39,6 +39,8 @@ No manifest editing is required.
 
 English names are trimmed, collapsed, and stored in lowercase; they identify the animal and stay searchable. The German name is displayed as entered, so capitalize it as a German noun (`Löwe`). It is required for a new animal and optional when appending a clip to an existing one. An exact normalized English name appends to the existing animal; a new name creates an animal. A typo therefore creates a separate entry.
 
+Agents adding clips from a checkout should follow `.claude/skills/add-animal-clip/SKILL.md`.
+
 The workflow downloads every missing source with `yt-dlp` through a pinned Cloudflare WARP container, normalizes it with FFmpeg, extracts a cover from the first clip, and publishes a rolling `content` GitHub Release. The app reads:
 
 ```text
