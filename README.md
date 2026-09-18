@@ -19,9 +19,10 @@ Useful checks:
 npm run typecheck
 npm test
 python3 -m unittest discover -s scripts/content -p 'test_*.py'
+python3 -m unittest discover -s scripts/android -p 'test_*.py'
 ```
 
-To create an installable APK without local Android tooling, run **Build Android APK** from GitHub Actions and download the `miau-muh-und-co` artifact. An EAS build is also configured:
+To create an installable APK without local Android tooling, run **Build Android APK** from GitHub Actions and download the `miau-muh-und-co` artifact. The release-signing keystore and credentials are backed up in the private 1Password vault and supplied to Actions through repository secrets. An EAS build is also configured:
 
 ```sh
 npx eas-cli build --platform android --profile preview
