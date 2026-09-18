@@ -108,7 +108,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if ! gh release view content >/dev/null 2>&1; then
-            gh release create content --title "Animal content" --notes "Generated media for Miau, Muh und mehr"
+            gh release create content --title "Animal content" --notes "Generated media for Miau, Muh und Mehr"
           fi
           gh release upload content dist/content/* --clobber
 

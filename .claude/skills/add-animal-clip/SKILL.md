@@ -1,6 +1,6 @@
 ---
 name: add-animal-clip
-description: Add animal clips to the Miau, Muh und mehr catalog - find a suitable YouTube Short, pick the German display name, and append it to content/catalog.json so CI publishes the media. Use when the user asks to add an animal, add a sound or clip, extend the catalog, or replace a clip that no longer works.
+description: Add animal clips to the Miau, Muh und Mehr catalog - find a suitable YouTube Short, pick the German display name, and append it to content/catalog.json so CI publishes the media. Use when the user asks to add an animal, add a sound or clip, extend the catalog, or replace a clip that no longer works.
 ---
 
 # Add an animal clip

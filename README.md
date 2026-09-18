@@ -1,4 +1,4 @@
-# Miau, Muh und mehr
+# Miau, Muh und Mehr
 
 An offline-first Android app for playing short animal videos. Animal names are shown in German. Animals can be shown as large tiles, a carousel, or a list. Selecting one plays up to three shuffled clips and then returns home.
 
