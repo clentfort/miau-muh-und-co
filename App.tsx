@@ -389,7 +389,7 @@ function HomeScreen() {
         <View style={styles.emptyMark}>
           <Text style={styles.emptyMarkText}>♪</Text>
         </View>
-        <Text style={styles.emptyTitle}>Miau, Muh und Co</Text>
+        <Text style={styles.emptyTitle}>Miau, Muh und mehr</Text>
         <Text style={styles.emptyText}>
           {needsWifi
             ? 'Verbinde dich mit einem WLAN, um die Tierstimmen herunterzuladen.'
@@ -415,7 +415,7 @@ function HomeScreen() {
         <View style={styles.titleRow}>
           <View>
             <Text style={styles.kicker}>HÖR MAL!</Text>
-            <Text style={styles.title}>Miau, Muh und Co</Text>
+            <Text style={styles.title}>Miau, Muh und mehr</Text>
           </View>
           <Pressable
             accessibilityLabel="Einstellungen öffnen"

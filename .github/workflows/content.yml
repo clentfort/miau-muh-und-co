@@ -95,14 +95,14 @@ jobs:
             --catalog content/catalog.json \
             --output dist/content \
             --cache .content-cache \
-            --release-base https://github.com/clentfort/miau-muh-und-co/releases/download/content
+            --release-base https://github.com/clentfort/miau-muh-und-mehr/releases/download/content
 
       - name: Create rolling content release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           if ! gh release view content >/dev/null 2>&1; then
-            gh release create content --title "Animal content" --notes "Generated media for Miau, Muh und Co"
+            gh release create content --title "Animal content" --notes "Generated media for Miau, Muh und mehr"
           fi
           gh release upload content dist/content/* --clobber
 

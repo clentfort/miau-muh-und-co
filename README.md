@@ -1,4 +1,4 @@
-# Miau, Muh und Co
+# Miau, Muh und mehr
 
 An offline-first Android app for playing short animal videos. Animals can be shown as large tiles, a carousel, or a list. Selecting one plays up to three shuffled clips and then returns home.
 
@@ -22,7 +22,7 @@ python3 -m unittest discover -s scripts/content -p 'test_*.py'
 python3 -m unittest discover -s scripts/android -p 'test_*.py'
 ```
 
-To create an installable APK without local Android tooling, run **Build Android APK** from GitHub Actions and download the `miau-muh-und-co` artifact. The release-signing keystore and credentials are backed up in the private 1Password vault and supplied to Actions through repository secrets. An EAS build is also configured:
+To create an installable APK without local Android tooling, run **Build Android APK** from GitHub Actions and download the `miau-muh-und-mehr` artifact. The release-signing keystore and credentials are backed up in the private 1Password vault and supplied to Actions through repository secrets. An EAS build is also configured:
 
 ```sh
 npx eas-cli build --platform android --profile preview
@@ -32,7 +32,7 @@ npx eas-cli build --platform android --profile preview
 
 No manifest editing is required.
 
-1. Open **Actions** in `clentfort/miau-muh-und-co`.
+1. Open **Actions** in `clentfort/miau-muh-und-mehr`.
 2. Select **Add animal clip**.
 3. Select **Run workflow**.
 4. Enter an English animal name and a YouTube Short URL.
@@ -42,7 +42,7 @@ Names are trimmed, collapsed, and stored in lowercase. An exact normalized name 
 The workflow downloads every missing source with `yt-dlp` through a pinned Cloudflare WARP container, normalizes it with FFmpeg, extracts a cover from the first clip, and publishes a rolling `content` GitHub Release. The app reads:
 
 ```text
-https://github.com/clentfort/miau-muh-und-co/releases/download/content/manifest.json
+https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/manifest.json
 ```
 
 The repository and release assets must be publicly readable by the app.

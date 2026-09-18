@@ -13,7 +13,7 @@ import type {
 } from './types';
 
 export const MANIFEST_URL =
-  'https://github.com/clentfort/miau-muh-und-co/releases/download/content/manifest.json';
+  'https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/manifest.json';
 
 const MANIFEST_STORAGE_KEY = 'content-manifest-v1';
 const CONTENT_DIRECTORY = new Directory(Paths.document, 'animal-content');

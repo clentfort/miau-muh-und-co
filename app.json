@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "Miau, Muh und Co",
-    "slug": "miau-muh-und-co",
-    "version": "1.0.1",
+    "name": "Miau, Muh und mehr",
+    "slug": "miau-muh-und-mehr",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "android": {
-      "package": "com.lentfort.miaumuhundco",
-      "versionCode": 2,
+      "package": "com.lentfort.miaumuhundmehr",
+      "versionCode": 3,
       "adaptiveIcon": {
         "backgroundColor": "#fff7df",
         "foregroundImage": "./assets/android-icon-foreground.png",
