@@ -1,0 +1,48 @@
+{
+  "animals": [
+    {
+      "id": "giraffe",
+      "name": "giraffe",
+      "sources": [
+        {
+          "youtubeId": "xLWXtgp1D1A",
+          "url": "https://www.youtube.com/shorts/xLWXtgp1D1A"
+        }
+      ]
+    },
+    {
+      "id": "gnu",
+      "name": "gnu",
+      "sources": [
+        {
+          "youtubeId": "siJ0aW2lRx8",
+          "url": "https://www.youtube.com/shorts/siJ0aW2lRx8"
+        }
+      ]
+    },
+    {
+      "id": "lion",
+      "name": "lion",
+      "sources": [
+        {
+          "youtubeId": "0dbu5Q3l-yM",
+          "url": "https://www.youtube.com/shorts/0dbu5Q3l-yM"
+        },
+        {
+          "youtubeId": "oN7axlCqiG4",
+          "url": "https://www.youtube.com/shorts/oN7axlCqiG4"
+        }
+      ]
+    },
+    {
+      "id": "seal",
+      "name": "seal",
+      "sources": [
+        {
+          "youtubeId": "jFLbcO88vWc",
+          "url": "https://www.youtube.com/shorts/jFLbcO88vWc"
+        }
+      ]
+    }
+  ]
+}
