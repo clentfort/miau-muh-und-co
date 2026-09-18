@@ -149,6 +149,7 @@ function GridView({ animals, onSelect }: AnimalViewProps) {
         <Pressable
           accessibilityLabel={`${displayName(item)} abspielen`}
           accessibilityRole="button"
+          onLongPress={() => onSelect(item)}
           onPress={() => onSelect(item)}
           style={({ pressed }) => [styles.gridCard, pressed && styles.cardPressed]}
         >
@@ -173,6 +174,7 @@ function ListView({ animals, onSelect }: AnimalViewProps) {
         <Pressable
           accessibilityLabel={`${displayName(item)} abspielen`}
           accessibilityRole="button"
+          onLongPress={() => onSelect(item)}
           onPress={() => onSelect(item)}
           style={({ pressed }) => [styles.listCard, pressed && styles.cardPressed]}
         >
@@ -204,6 +206,7 @@ function CarouselView({ animals, onSelect }: AnimalViewProps) {
         <Pressable
           accessibilityLabel={`${displayName(item)} abspielen`}
           accessibilityRole="button"
+          onLongPress={() => onSelect(item)}
           onPress={() => onSelect(item)}
           style={({ pressed }) => [
             styles.carouselCard,
