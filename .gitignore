@@ -50,3 +50,4 @@ __pycache__/
 # agent skills (a global ignore excludes .claude/)
 !.claude/
 !.claude/skills/**
+/.claude/worktrees/
