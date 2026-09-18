@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 import tempfile
@@ -86,21 +87,22 @@ def process_clip(source: dict, cache: Path) -> Path:
     with tempfile.TemporaryDirectory() as temporary_name:
         temporary = Path(temporary_name)
         download_template = temporary / "source.%(ext)s"
-        run(
-            [
-                "yt-dlp",
-                "--no-playlist",
-                "--js-runtimes",
-                "node",
-                "--format",
-                "bv*[height<=720]+ba/b[height<=720]/b",
-                "--merge-output-format",
-                "mp4",
-                "--output",
-                str(download_template),
-                source["url"],
-            ]
-        )
+        command = [
+            "yt-dlp",
+            "--no-playlist",
+            "--js-runtimes",
+            "node",
+            "--format",
+            "bv*[height<=720]+ba/b[height<=720]/b",
+            "--merge-output-format",
+            "mp4",
+            "--output",
+            str(download_template),
+        ]
+        if proxy := os.environ.get("YTDLP_PROXY"):
+            command.extend(["--proxy", proxy])
+        command.append(source["url"])
+        run(command)
         downloaded = next(temporary.glob("source.*"), None)
         if downloaded is None:
             raise RuntimeError(f"yt-dlp did not create a file for {source_id}.")

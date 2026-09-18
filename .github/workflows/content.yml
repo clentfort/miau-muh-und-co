@@ -52,6 +52,26 @@ jobs:
       - name: Install yt-dlp
         run: python -m pip install --disable-pip-version-check yt-dlp==2026.8.19
 
+      - name: Start download proxy
+        run: |
+          docker run --detach \
+            --name warp \
+            --publish 1080:1080 \
+            --cap-add NET_ADMIN \
+            --sysctl net.ipv6.conf.all.disable_ipv6=0 \
+            --sysctl net.ipv4.conf.all.src_valid_mark=1 \
+            caomingjun/warp@sha256:d50d29d859bd437420bf63256f803e9fac28657c346b6f5ba50e21ffeb93dff2
+          for attempt in {1..20}; do
+            if curl --fail --silent --show-error --max-time 10 \
+              --proxy socks5h://127.0.0.1:1080 \
+              https://www.cloudflare.com/cdn-cgi/trace | grep --quiet 'warp=on'; then
+              exit 0
+            fi
+            sleep 3
+          done
+          docker logs warp
+          exit 1
+
       - name: Add requested clip
         if: github.event_name == 'workflow_dispatch'
         env:
@@ -64,6 +84,8 @@ jobs:
             --url "$SHORT_URL"
 
       - name: Build content
+        env:
+          YTDLP_PROXY: socks5://127.0.0.1:1080
         run: |
           rm -rf dist/content
           python scripts/content/build_content.py \

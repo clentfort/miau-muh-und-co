@@ -38,7 +38,7 @@ No manifest editing is required.
 
 Names are trimmed, collapsed, and stored in lowercase. An exact normalized name appends to the existing animal; a new name creates an animal. A typo therefore creates a separate entry.
 
-The workflow downloads every missing source with `yt-dlp`, normalizes it with FFmpeg, extracts a cover from the first clip, and publishes a rolling `content` GitHub Release. The app reads:
+The workflow downloads every missing source with `yt-dlp` through a pinned Cloudflare WARP container, normalizes it with FFmpeg, extracts a cover from the first clip, and publishes a rolling `content` GitHub Release. The app reads:
 
 ```text
 https://github.com/clentfort/miau-muh-und-co/releases/download/content/manifest.json
