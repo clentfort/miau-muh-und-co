@@ -39,10 +39,20 @@ describe('shuffleClips', () => {
 describe('animal names', () => {
   it('normalizes search terms', () => {
     expect(normalizeSearch('  Gíraffe ')).toBe('giraffe');
-    expect(matchesSearch('sea lion', 'LION')).toBe(true);
   });
 
-  it('formats lowercase names for display', () => {
-    expect(displayName('red fox')).toBe('Red Fox');
+  it('finds an animal by its German and its English name', () => {
+    const animal = { name: 'sea lion', nameDe: 'Seelöwe' };
+    expect(matchesSearch(animal, 'LÖWE')).toBe(true);
+    expect(matchesSearch(animal, 'lion')).toBe(true);
+    expect(matchesSearch(animal, 'kuh')).toBe(false);
+  });
+
+  it('displays the German name', () => {
+    expect(displayName({ name: 'red fox', nameDe: 'Fuchs' })).toBe('Fuchs');
+  });
+
+  it('falls back to the capitalized English name', () => {
+    expect(displayName({ name: 'red fox' })).toBe('Red Fox');
   });
 });

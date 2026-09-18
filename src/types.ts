@@ -14,6 +14,7 @@ export interface ManifestClip extends RemoteAsset {
 export interface ManifestAnimal {
   id: string;
   name: string;
+  nameDe?: string;
   cover: RemoteAsset;
   clips: ManifestClip[];
 }

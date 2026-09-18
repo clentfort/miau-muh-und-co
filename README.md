@@ -1,6 +1,6 @@
 # Miau, Muh und mehr
 
-An offline-first Android app for playing short animal videos. Animals can be shown as large tiles, a carousel, or a list. Selecting one plays up to three shuffled clips and then returns home.
+An offline-first Android app for playing short animal videos. Animal names are shown in German. Animals can be shown as large tiles, a carousel, or a list. Selecting one plays up to three shuffled clips and then returns home.
 
 ## App development
 
@@ -35,9 +35,9 @@ No manifest editing is required.
 1. Open **Actions** in `clentfort/miau-muh-und-mehr`.
 2. Select **Add animal clip**.
 3. Select **Run workflow**.
-4. Enter an English animal name and a YouTube Short URL.
+4. Enter an English animal name, the German name shown in the app, and a YouTube Short URL.
 
-Names are trimmed, collapsed, and stored in lowercase. An exact normalized name appends to the existing animal; a new name creates an animal. A typo therefore creates a separate entry.
+English names are trimmed, collapsed, and stored in lowercase; they identify the animal and stay searchable. The German name is displayed as entered, so capitalize it as a German noun (`Löwe`). It is required for a new animal and optional when appending a clip to an existing one. An exact normalized English name appends to the existing animal; a new name creates an animal. A typo therefore creates a separate entry.
 
 The workflow downloads every missing source with `yt-dlp` through a pinned Cloudflare WARP container, normalizes it with FFmpeg, extracts a cover from the first clip, and publishes a rolling `content` GitHub Release. The app reads:
 

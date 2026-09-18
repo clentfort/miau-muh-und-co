@@ -17,6 +17,13 @@ SCHEMA_VERSION = 1
 PROCESSING_VERSION = "1"
 
 
+GERMAN_FOLDING = str.maketrans({"ä": "a", "ö": "o", "ü": "u", "ß": "ss"})
+
+
+def german_sort_key(animal: dict) -> str:
+    return animal["nameDe"].lower().translate(GERMAN_FOLDING)
+
+
 def run(command: list[str]) -> None:
     subprocess.run(command, check=True)
 
@@ -58,6 +65,7 @@ def validate_catalog(catalog: dict) -> None:
     for animal in animals:
         animal_id = animal.get("id")
         name = animal.get("name")
+        name_de = animal.get("nameDe")
         sources = animal.get("sources")
         if not isinstance(animal_id, str) or not animal_id:
             raise ValueError("Every animal needs an id.")
@@ -66,6 +74,8 @@ def validate_catalog(catalog: dict) -> None:
         animal_ids.add(animal_id)
         if not isinstance(name, str) or name != name.lower() or not name:
             raise ValueError(f"Animal names must be lowercase: {name!r}")
+        if not isinstance(name_de, str) or not name_de.strip():
+            raise ValueError(f"Animal {name!r} needs a German name in nameDe.")
         if not isinstance(sources, list) or not sources:
             raise ValueError(f"Animal {name!r} needs at least one source.")
         for source in sources:
@@ -186,7 +196,7 @@ def build(catalog_path: Path, output: Path, cache: Path, release_base: str) -> d
     output.mkdir(parents=True, exist_ok=True)
 
     manifest_animals = []
-    for animal in sorted(catalog["animals"], key=lambda item: item["name"]):
+    for animal in sorted(catalog["animals"], key=german_sort_key):
         manifest_clips = []
         first_clip: Path | None = None
 
@@ -213,6 +223,7 @@ def build(catalog_path: Path, output: Path, cache: Path, release_base: str) -> d
             {
                 "id": animal["id"],
                 "name": animal["name"],
+                "nameDe": animal["nameDe"],
                 "cover": asset(release_base, cover_path),
                 "clips": manifest_clips,
             }

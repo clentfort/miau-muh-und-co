@@ -7,6 +7,10 @@ on:
         description: Animal name in English
         required: true
         type: string
+      animal_name_de:
+        description: Animal name in German, as shown in the app (required for a new animal)
+        required: false
+        type: string
       youtube_short_url:
         description: YouTube Short URL
         required: true
@@ -79,11 +83,13 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         env:
           ANIMAL_NAME: ${{ inputs.animal_name }}
+          ANIMAL_NAME_DE: ${{ inputs.animal_name_de }}
           SHORT_URL: ${{ inputs.youtube_short_url }}
         run: |
           python scripts/content/add_clip.py \
             --catalog content/catalog.json \
             --animal "$ANIMAL_NAME" \
+            --name-de "$ANIMAL_NAME_DE" \
             --url "$SHORT_URL"
 
       - name: Build content
