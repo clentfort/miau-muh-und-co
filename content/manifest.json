@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "version": "443a54fb0dab98b6",
-  "updatedAt": "2026-09-18T15:27:19.587872Z",
+  "version": "0f261612cafe893f",
+  "updatedAt": "2026-09-18T15:47:43.081096Z",
   "animals": [
     {
       "id": "giraffe",
@@ -61,6 +61,24 @@
           "sha256": "ab1efc2821ddebee1efc62a122704adcc992e2ae8d7fbf73662ec8119ebcd5b2",
           "bytes": 790875,
           "durationMs": 8021
+        }
+      ]
+    },
+    {
+      "id": "pinguin",
+      "name": "pinguin",
+      "cover": {
+        "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/pinguin.jpg",
+        "sha256": "c92af70172c6c582e7a431812b2202a2831b7c4649d794ce71401d4f65ece35b",
+        "bytes": 12260
+      },
+      "clips": [
+        {
+          "id": "MVgwKQjHhxQ",
+          "url": "https://github.com/clentfort/miau-muh-und-mehr/releases/download/content/pinguin-MVgwKQjHhxQ.mp4",
+          "sha256": "7cbf23df37597b51ca5ec76e8a81b0da20964c1ae1ababcc9b9ec020444990b3",
+          "bytes": 195001,
+          "durationMs": 4201
         }
       ]
     },

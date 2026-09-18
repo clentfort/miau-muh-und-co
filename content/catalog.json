@@ -35,6 +35,16 @@
       ]
     },
     {
+      "id": "pinguin",
+      "name": "pinguin",
+      "sources": [
+        {
+          "youtubeId": "MVgwKQjHhxQ",
+          "url": "https://www.youtube.com/shorts/MVgwKQjHhxQ"
+        }
+      ]
+    },
+    {
       "id": "seal",
       "name": "seal",
       "sources": [
